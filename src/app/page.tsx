@@ -1,103 +1,76 @@
-import Image from "next/image";
+import Silk from '@/components/Silk';
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+  FaBehanceSquare,
+  FaLinkedin,
+  FaWhatsapp,
+  FaYoutube,
+} from 'react-icons/fa';
 
 export default function Home() {
+  const links = [
+    {
+      icon: <FaLinkedin />,
+      label: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/vinihebert/',
+    },
+    {
+      icon: <FaBehanceSquare />,
+      label: 'Behance',
+      url: 'https://www.behance.net/vinihebert',
+    },
+    {
+      icon: <FaWhatsapp />,
+      label: 'WhatsApp',
+      url: 'https://wa.me/5584988994447?text=Fala%20Vini!%20Dei%20uma%20olhada%20nas%20suas%20produ%C3%A7%C3%B5es%20e%20tenho%20interesse%20no%20seu%20trampo%20🚀',
+    },
+    {
+      icon: <FaYoutube />,
+      label: 'YouTube',
+      url: 'https://youtube.com',
+    },
+  ];
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <div className="fixed inset-0 w-full min-h-screen z-0">
+        <Silk scale={2} speed={3} color="#3c393d" noiseIntensity={1.2} />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <main className="relative z-10 min-h-screen flex flex-col items-center justify-center gap-10 p-4 overflow-hidden">
+        <div className="flex flex-col items-center justify-center w-full">
+          <Image
+            src="https://github.com/shadcn.png"
+            alt="shadcn"
+            width={100}
+            height={100}
+            className="rounded-full shadow-lg"
+          />
+          <div className="flex flex-col items-center justify-center w-full">
+            <h1 className="text-2xl font-bold mt-4 text-white drop-shadow-lg">
+              VINI HEBERT
+            </h1>
+            <p className="text-gray-200 drop-shadow-md">
+              Designer & Videomaker
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 w-full max-w-xs space-y-4">
+          {links.map((link) => (
+            <Link
+              key={link.url}
+              href={link.url}
+              className="block p-[1px] rounded-lg bg-gradient-to-r from-yellow-400 from-70% to-red-600"
+            >
+              <div className="bg-black/95 hover:bg-zinc-900 backdrop-blur-sm text-white px-6 py-3 rounded-lg transition-all duration-200 shadow-lg transform text-center flex items-center justify-center gap-2">
+                <span>{link.icon}</span>
+                <span>{link.label}</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
