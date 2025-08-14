@@ -45,6 +45,7 @@ export default function Home() {
             width={180}
             height={180}
             className="rounded-full shadow-lg aspect-square object-cover object-top"
+            priority
           />
           <div className="flex flex-col items-center justify-center w-full">
             <h1 className="text-2xl font-bold mt-4 drop-shadow-md">
