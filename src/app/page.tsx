@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <div className="fixed inset-0 w-full min-h-screen z-0">
-        <Silk scale={2} speed={3} color="#3c393d" noiseIntensity={1.2} />
+        <Silk scale={3} speed={8} color="#222121d5" noiseIntensity={1.2} />
       </div>
 
       <main className="relative z-10 min-h-screen flex flex-col items-center justify-center gap-10 p-4 overflow-hidden">
@@ -47,21 +47,21 @@ export default function Home() {
             className="rounded-full shadow-lg"
           />
           <div className="flex flex-col items-center justify-center w-full">
-            <h1 className="text-2xl font-bold mt-4 text-white drop-shadow-lg">
+            <h1 className="text-2xl font-bold mt-4 drop-shadow-md">
               VINI HEBERT
             </h1>
-            <p className="text-gray-200 drop-shadow-md">
+            <p className="bg-gradient-to-r from-yellow-400 to-red-600 bg-clip-text text-transparent drop-shadow-lg">
               Designer & Videomaker
             </p>
           </div>
         </div>
 
-        <div className="mt-10 w-full max-w-xs space-y-4">
+        <div className=" w-full max-w-xs space-y-4">
           {links.map((link) => (
             <Link
               key={link.url}
               href={link.url}
-              className="block p-[1px] rounded-lg bg-gradient-to-r from-yellow-400 from-70% to-red-600"
+              className="block p-[1px] rounded-lg bg-gradient-to-r from-yellow-500 from-75% to-red-600"
             >
               <div className="bg-black/95 hover:bg-zinc-900 backdrop-blur-sm text-white px-6 py-3 rounded-lg transition-all duration-200 shadow-lg transform text-center flex items-center justify-center gap-2">
                 <span>{link.icon}</span>
