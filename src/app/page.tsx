@@ -40,11 +40,11 @@ export default function Home() {
       <main className="relative z-10 min-h-screen flex flex-col items-center justify-center gap-10 p-4 overflow-hidden">
         <div className="flex flex-col items-center justify-center w-full">
           <Image
-            src="https://github.com/shadcn.png"
-            alt="shadcn"
-            width={100}
-            height={100}
-            className="rounded-full shadow-lg"
+            src="/avatar.png"
+            alt="avatar"
+            width={180}
+            height={180}
+            className="rounded-full shadow-lg aspect-square object-cover object-top"
           />
           <div className="flex flex-col items-center justify-center w-full">
             <h1 className="text-2xl font-bold mt-4 drop-shadow-md">
