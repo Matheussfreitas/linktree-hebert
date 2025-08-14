@@ -28,10 +28,10 @@ export default function Home() {
     {
       icon: <FaYoutube />,
       label: 'YouTube',
-      url: 'https://youtube.com',
+      url: 'https://www.youtube.com/@vinihebert',
     },
   ];
-  
+
   return (
     <>
       <div className="fixed inset-0 w-full min-h-screen z-0">
