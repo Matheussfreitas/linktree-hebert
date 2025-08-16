@@ -16,9 +16,9 @@ export default function Home() {
       url: 'https://www.behance.net/vinihebert',
     },
     {
-      icon: <FaWhatsapp />,
-      label: 'WhatsApp',
-      url: 'https://wa.me/5584988994447?text=Fala%20Vini!%20Dei%20uma%20olhada%20nas%20suas%20produ%C3%A7%C3%B5es%20e%20tenho%20interesse%20no%20seu%20trampo%20🚀',
+      icon: <FaYoutube />,
+      label: 'YouTube',
+      url: 'https://www.youtube.com/@vinihebert',
     },
     {
       icon: <FaLinkedin />,
@@ -26,9 +26,9 @@ export default function Home() {
       url: 'https://www.linkedin.com/in/vinihebert/',
     },
     {
-      icon: <FaYoutube />,
-      label: 'YouTube',
-      url: 'https://www.youtube.com/@vinihebert',
+      icon: <FaWhatsapp />,
+      label: 'WhatsApp',
+      url: 'https://wa.me/5584988994447?text=Fala%20Vini!%20Dei%20uma%20olhada%20nas%20suas%20produ%C3%A7%C3%B5es%20e%20tenho%20interesse%20no%20seu%20trampo%20🚀',
     },
   ];
 
